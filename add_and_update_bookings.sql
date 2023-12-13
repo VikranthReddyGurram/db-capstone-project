@@ -7,7 +7,6 @@ BEGIN
 	INSERT INTO bookings
     (BookingID, BookingDate, TableNumber, CustomerID) VALUES
     (booking_id, booking_date, table_number, customer_id);
-    SELECT "New booking added" AS "Confirmation";
 END//
 DELIMITER ;
 
@@ -33,7 +32,6 @@ CREATE PROCEDURE CancelBooking (IN booking_id INT)
 BEGIN
 	DELETE FROM bookings
 	WHERE BookingID=booking_id;
-	SELECT CONCAT("Booking ", booking_id, " is cancelled") AS "Confirmation";
 END//
 DELIMITER ;
 
